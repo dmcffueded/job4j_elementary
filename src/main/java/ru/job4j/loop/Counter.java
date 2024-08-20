@@ -2,15 +2,14 @@ package ru.job4j.loop;
 
 public class Counter {
     public static int sum(int start, int finish) {
+        int sum = 0;
         if (start <= finish) {
-            int sum = 0;
             for (int i = start; i <= finish; i++) {
                 sum = sum + i;
             }
             return sum;
-        } else {
-            return 0;
         }
+        return sum;
     }
 
     public static void main(String[] args) {
