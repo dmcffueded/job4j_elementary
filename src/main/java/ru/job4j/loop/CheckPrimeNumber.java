@@ -7,12 +7,16 @@ public class CheckPrimeNumber {
             return false;
         }
 
-        for (int i = 2; i <= (number / 2); i++) {
+        boolean result = true;
+
+        for (int i = 2; i <= number - 1; i++) {
             if (number % i == 0) {
-                return false;
+                result = false;
+                break;
             }
         }
-        return true;
+
+        return result;
     }
 
 }
