@@ -31,4 +31,14 @@ class PointTest {
         double output = a.distance(b);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
+
+    @Test
+    void whenPointsMinus2Minus2Minus2And2And2And2Then5Dot66() {
+        Point a = new Point(-2, -2, -2);
+        Point b = new Point(3, 3, 3);
+        double expected = 8.66;
+        double output = a.distance3d(b);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
 }
